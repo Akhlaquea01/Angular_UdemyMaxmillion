@@ -1,0 +1,7 @@
+<p [ngStyle]="{backgroundColor:getColor()}"
+   [ngClass]="{online:getServerStatus()==='online'}"
+> {{'server'}} with Id 5 is {{getServerStatus()}} </p>
+
+<input type="text" [(ngModel)]="serverName" >
+<button (click)="onCreateServer()">push</button>
+<p *ngFor="let server of servers; let i=index">{{server}}{{i+1}}</p>
